@@ -12,7 +12,7 @@ export default {
   name: 'App',
   data() {
     return {
-      height: '500px',
+      height: '400px',
       width: '610px',
 
       /*echarts数据*/
@@ -64,8 +64,6 @@ export default {
             }
             return res;
           }
-
-
         },
         visualMap: {
           min: 500,//最小值
@@ -79,8 +77,8 @@ export default {
             color: ['#313695', '#4575b4', '#74add1', '#abd9e9', '#e0f3f8', "#718cef", "#947aad"]
           },
         },
-        legend:{//图例组件展现了不同系列的标记(symbol)，颜色和名字。可以通过点击图例控制哪些系列不显示。
-          show:false,//
+        legend: {//图例组件展现了不同系列的标记(symbol)，颜色和名字。可以通过点击图例控制哪些系列不显示。
+          show: false,//
           /*formatter: function (name) {
             return 'Legend' + name;
           }*/
@@ -88,15 +86,14 @@ export default {
         series: [{
           name: '设备数量',
           type: 'map',
-
           mapType: 'fuzhou',//地图名称
           aspectScale: 0.9, //地图长度比
-          roam:'scale',//如果只想要开启缩放或者平移，可以设置成 'scale' 或者 'move'。设置成 true 为都开启
+          roam: 'scale',//如果只想要开启缩放或者平移，可以设置成 'scale' 或者 'move'。设置成 true 为都开启
           zoom: 1.2,//地图缩放比例当前视角的缩放比例。
           label: {
-            fontStyle:'italic',//'normal','italic','oblique'
-            fontSize:100,//文字的字体大小。
-            align:'center',
+            fontStyle: 'italic',//'normal','italic','oblique'
+            fontSize: 100,//文字的字体大小。
+            align: 'center',
             normal: {
               show: true,
               textStyle: {
@@ -111,22 +108,22 @@ export default {
               focus: 'none'//self:只聚焦（不淡出）当前高亮的数据的图形,'none' 不淡出其它图形，默认使用该配置
             }
           },
-          itemStyle:{//地图区域的多边形 图形样式
-            borderWidth:1,//描边线宽。为 0 时无描边
-            borderType:'dashed',//描边类型:'solid','dashed','dotted'
-            borderColor:'#000',//图形的描边颜色。支持的颜色格式同 color
+          itemStyle: {//地图区域的多边形 图形样式
+            borderWidth: 1,//描边线宽。为 0 时无描边
+            borderType: 'dashed',//描边类型:'solid','dashed','dotted'
+            borderColor: '#000',//图形的描边颜色。支持的颜色格式同 color
             shadowColor: 'rgba(0, 0, 0, 0.2)',//图形阴影的模糊大小。该属性配合 shadowColor,shadowOffsetX, shadowOffsetY 一起设置图形的阴影效果
             shadowBlur: 6,//阴影模糊
           },
-          showLegendSymbol:true,//存在legend时区域会出现小圆点
+          showLegendSymbol: true,//存在legend时区域会出现小圆点
           data: [//存放地图数据
             {
               name: '仓山区',
               value: 50000,
-              selected:false,//该区域是否选中。
-              labelLine:{
-                show:true,
-                showAbove:true,
+              selected: false,//该区域是否选中。
+              labelLine: {
+                show: true,
+                showAbove: true,
               }
             },
             {
@@ -178,7 +175,8 @@ export default {
               value: 1009
             },
 
-          ]
+          ],
+
         }
         ]
       };
